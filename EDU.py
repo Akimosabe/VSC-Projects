@@ -1,9 +1,15 @@
-m = int(input())
-p = int(input())
-n = int(input())
+import random
 
+numbers = [4, 8, 15, 16, 23, 42]
+count = [0] * len(numbers)
 
-for i in range(n):
-    print(i + 1, float(m))
-    m = m + (m * p * 0.01)
-    i = i + 1
+for i in range(len(numbers)):
+    while True:
+        num = random.randint(1, 50)
+        count[i] += 1
+        if num == numbers[i]:
+            print(num, end=" ")
+            break
+print()
+print('Количество попыток:', count)
+print('Общее количество:', sum(count))

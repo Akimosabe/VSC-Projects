@@ -10,6 +10,7 @@ for i in range(len(numbers)):
         if num == numbers[i]:
             print(num, end=" ")
             break
+        
 print()
 print('Количество попыток:', count)
 print('Общее количество:', sum(count))
